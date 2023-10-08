@@ -1,0 +1,237 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-image: url("diarrhoeal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; /* Add this to establish a positioning context */
+
+  /* Add an overlay with a semi-transparent background color */
+}
+
+/* Create the overlay with a semi-transparent background color */
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity (last value) as needed */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.background {
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Remove background here */
+}
+
+.background h2 {
+  font-family: "Helvetica";
+  font-weight: 100;
+  src: url(helveticaneue-ultrathin.woff);
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
+.background h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1b518c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: blue;
+}
+
+.overview {
+  /*background-color: #f0f0f0; ---------- */
+  padding: 50px 0;
+}
+
+.overview h2 {
+  color: #f0f0f0;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+/* Apply margin and bullet points to paragraphs in the "Overview" section */
+.overview span.p {
+  text-align: left;
+  display: block;
+  font-size: 30px;
+  color: #f0f0f0;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Adjust the margin between paragraphs */
+  position: relative;
+  padding-left: 20px; /* Adjust the padding for bullet points */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+}
+
+.overview h3 {
+  color: #f0f0f0;
+  font-family: "Helvetica";
+  font-weight: 100;
+  src: url(helveticaneue-ultrathin.woff);
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
+.container2 {
+  margin: 100px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin: 20px 50px; /* Adjusted margin for spacing */
+  cursor: pointer;
+}
+
+.icon img {
+  width: 250px; /* Adjust the width as needed */
+  height: 250px; /* Adjust the height as needed */
+  border-radius: 50%; /* Makes the icons round */
+  transition: transform 0.3s;
+}
+
+.icon img:hover {
+  transform: scale(1.1); /* Zoom in a bit on hover */
+}
+
+.icon-label {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #f0f0f0;
+}
+
+/* Your existing CSS code without changes */
+
+/* Add this CSS to center the icon images */
+.container .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the back button */
+.back-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1b518c; /* Background color */
+  color: #fff; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.back-button:hover {
+  background-color: blue; /* Change the background color on hover */
+}
+
+/* Center the button horizontally */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+/* Center the button horizontally with text-align */
+.button-container {
+  text-align: center;
+}
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding: 35px 0; /* Adjust the padding as needed */
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+}
+
+.overview h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1b518c; /* Background color for the footer */
+  color: #fff; /* Text color */
+  text-align: center;
+  padding: 20px; /* Add some padding for spacing */
+  font-size: 16px;
+}
+
+/* Style the names */
+footer p {
+  margin: 5px 0;
+}
+
+/* Add a border at the top of the footer */
+footer::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #fff;
+  margin: 10px 0;
+}
+
+/* Add a subtle hover effect for the names */
+footer p:hover {
+  color: #ff9900; /* Change text color on hover */
+  transition: color 0.3s ease;
+}
+
+footer a {
+  color: white;
+}
